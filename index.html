@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.1网站平台：一站管住所有站点的生成、发布与状态追踪</title>
+<meta name="keywords" content="9.1网站平台,网站生成,站点管理,自动发布,任务看板">
+<meta name="description" content="9.1网站平台把站点生成、任务执行、状态追踪和发布管理收进同一块看板：每个站点的开始时间、结束用时、生成字数、账号徽章与失败原因一目了然，失败任务一键重试或切换模型重新生成，未上传内容集中提醒。">
+<link rel="canonical" href="https://wzpt.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="9.1网站平台：一站管住所有站点的生成、发布与状态追踪">
+<meta property="og:description" content="9.1网站平台把站点生成、任务执行、状态追踪和发布管理收进同一块看板：每个站点的开始时间、结束用时、生成字数、账号徽章与失败原因一目了然，失败任务一键重试或切换模型重新生成，未上传内容集中提醒。平台支持批量勾选操作、移动端卡片视图与完整的任务日志，适合个人站长、内容团队和代理运营高效管理多条站点产线，从生成到上线全流程可控。">
+<meta property="og:url" content="https://wzpt.pages.dev/">
+<meta property="og:site_name" content="9.1网站平台">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="9.1网站平台：一站管住所有站点的生成、发布与状态追踪">
+<meta name="twitter:description" content="9.1网站平台把站点生成、任务执行、状态追踪和发布管理收进同一块看板：每个站点的开始时间、结束用时、生成字数、账号徽章与失败原因一目了然，失败任务一键重试或切换模型重新生成，未上传内容集中提醒，支持批量操作与移动端视图，站点产线全流程可控。">
+<link rel="icon" href="data:,">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"9.1网站平台","url":"https://wzpt.pages.dev/","description":"9.1网站平台提供站点生成、任务追踪、状态看板与批量发布管理，覆盖从生成到上线的全流程。","potentialAction":{"@type":"SearchAction","target":"https://wzpt.pages.dev/?s={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<link rel="stylesheet" href="assets/vendor/materialize/css/materialize.min.css">
+
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<script type="application/ld+json">{"@context":"https://ziyuan.baidu.com/contexts/cambrian.jsonld","@id":"https://wzpt.pages.dev/","title":"9.1网站平台：一站管住所有站点的生成、发布与状态追踪","pubDate":"2026-10-20T21:03:58","upDate":"2026-10-20T21:03:58"}</script>
+<link rel="stylesheet" href="assets/6vpr4k.css">
+</head>
+<body>
+<div class="shell">
+
+<!-- 侧边导航 -->
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-mark">9.1</div>
+    <div class="brand-name">9.1网站平台<small>站点产线控制台</small></div>
+  </div>
+  <nav class="nav">
+    <div class="nav-group">工作台</div>
+    <a href="#" class="active">任务看板 <span class="count">12</span></a>
+    <a href="#">站点列表 <span class="count">36</span></a>
+    <a href="#">发布队列 <span class="count">5</span></a>
+    <div class="nav-group">能力</div>
+    <a href="#features">生成引擎</a>
+    <a href="#scenes">运营场景</a>
+    <a href="#feed">动态与日志</a>
+    <div class="nav-group">支持</div>
+    <a href="#metrics">平台数据</a>
+    <a href="#faq">常见问题</a>
+  </nav>
+  <div class="side-foot">v9.1 · 稳定版<br>wzpt.pages.dev</div>
+</aside>
+
+<!-- 主区 -->
+<div class="main">
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单">☰</button>
+    <h2>9.1网站平台任务看板</h2>
+    <div class="search"><span>🔍</span><input type="search" placeholder="搜索站点、网址或账号…" aria-label="搜索"></div>
+    <button class="btn-ghost">导出报表</button>
+    <button class="btn-primary">＋ 新建站点任务</button>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container">
+      <span class="kicker">9.1网站平台 · 站点产线一站式看板</span>
+      <h1>生成、追踪、重试、发布，9.1网站平台把站点产线装进一块看板</h1>
+      <p>每个站点的开始与结束时间、生成字数、执行账号、失败原因和上传状态全部实时呈现。任务失败一键重试或切换模型再跑，未上传内容集中提醒，批量勾选批量处理，多条站点产线从此不打架。</p>
+      <div class="hero-actions">
+        <a href="#board" class="btn-primary">进入任务看板</a>
+        <a href="#features" class="btn-outline">了解生成引擎</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>36</b><span>在管站点</span></div>
+        <div class="hero-stat"><b>12,480</b><span>本月生成字数（万）</span></div>
+        <div class="hero-stat"><b>98.2%</b><span>任务成功率</span></div>
+        <div class="hero-stat"><b>15m28s</b><span>平均单站用时</span></div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 任务看板 -->
+    <section id="board">
+      <div class="container">
+        <div class="sec-head">
+          <div><h2>今日任务看板</h2><p>实时更新 · 共 12 条任务 · 2 条待处理</p></div>
+          <span class="tag warn">2 条生成失败待重试</span>
+        </div>
+        <div class="board-tools">
+          <label class="chk"><input type="checkbox" id="chkAll"> 全选本页</label>
+          <button class="btn-ghost">批量重试</button>
+          <button class="btn-ghost">批量删除</button>
+          <button class="btn-ghost">只看失败</button>
+          <button class="btn-ghost">只看未上传</button>
+        </div>
+        <div class="table-card">
+          <div class="tbl-wrap">
+            <table class="tasks">
+              <thead><tr>
+                <th style="width:36px"><input type="checkbox" aria-label="全选"></th>
+                <th>网站</th><th>网址</th><th>时间</th><th>模型</th><th>账号</th><th>耗时</th><th>状态</th><th>上传</th><th>操作</th>
+              </tr></thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" aria-label="选择"></td>
+                  <td><div class="site">木头泛目录程序</div></td>
+                  <td><a class="site-url" href="#">mtfmlc.pages.dev</a></td>
+                  <td><div class="time-group"><div><i>开始</i><b>10-17 21:36</b></div><div><i>结束</i><b>10-17 21:51</b></div><div><i>用时</i>生成 15m28s</div></div></td>
+                  <td>deepseek-flash</td>
+                  <td><span class="badge-acct">GH</span><div class="acct-name">sampsonallison9711</div></td>
+                  <td><div class="cost">生成 15m28s <span class="sub">· 3746 字</span></div></td>
+                  <td><span class="status-fail">生成失败</span></td>
+                  <td><span class="up-state">未上传</span></td>
+                  <td><button class="btn-mini">重试</button><button class="btn-mini">换模型</button><button class="btn-mini danger">删除</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" aria-label="选择"></td>
+                  <td><div class="site">青柠企业建站</div></td>
+                  <td><a class="site-url" href="#">qnwj.pages.dev</a></td>
+                  <td><div class="time-group"><div><i>开始</i><b>10-17 20:02</b></div><div><i>结束</i><b>10-17 20:19</b></div><div><i>用时</i>生成 17m04s</div></div></td>
+                  <td>glm-air</td>
+                  <td><span class="badge-acct">GH</span><div class="acct-name">lin_warehouse02</div></td>
+                  <td><div class="cost">生成 17m04s <span class="sub">· 5122 字</span></div></td>
+                  <td><span class="status-ok">已完成</span></td>
+                  <td><span class="up-state">未上传</span></td>
+                  <td><button class="btn-mini">上传</button><button class="btn-mini">预览</button><button class="btn-mini danger">删除</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" aria-label="选择"></td>
+                  <td><div class="site">城市攻略门户</div></div></td>
+                  <td><a class="site-url" href="#">csgl.pages.dev</a></td>
+                  <td><div class="time-group"><div><i>开始</i><b>10-17 18:40</b></div><div><i>结束</i><b>10-17 18:55</b></div><div><i>用时</i>生成 14m52s</div></div></td>
+                  <td>deepseek-flash</td>
+                  <td><span class="badge-acct">GH</span><div class="acct-name">mika.publish07</div></td>
+                  <td><div class="cost">生成 14m52s <span class="sub">· 4308 字</span></div></td>
+                  <td><span class="status-ok">已完成</span></td>
+                  <td><span class="status-ok">已上传</span></td>
+                  <td><button class="btn-mini">访问</button><button class="btn-mini">重新生成</button><button class="btn-mini danger">删除</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" aria-label="选择"></td>
+                  <td><div class="site">装备测评专栏</div></td>
+                  <td><a class="site-url" href="#">zbcp.pages.dev</a></td>
+                  <td><div class="time-group"><div><i>开始</i><b>10-17 16:11</b></div><div><i>结束</i><b>10-17 16:30</b></div><div><i>用时</i>生成 18m37s</div></div></td>
+                  <td>qwen-turbo</td>
+                  <td><span class="badge-acct">GH</span><div class="acct-name">dev.tanaka55</div></td>
+                  <td><div class="cost">生成 18m37s <span class="sub">· 6011 字</span></div></td>
+                  <td><span class="status-ok">已完成</span></td>
+                  <td><span class="status-ok">已上传</span></td>
+                  <td><button class="btn-mini">访问</button><button class="btn-mini">重新生成</button><button class="btn-mini danger">删除</button></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" aria-label="选择"></td>
+                  <td><div class="site">家电选购指南</div></td>
+                  <td><a class="site-url" href="#">jdxg.pages.dev</a></td>
+                  <td><div class="time-group"><div><i>开始</i><b>10-17 14:25</b></div><div><i>结束</i><b>—</b></div><div><i>用时</i>进行中 06m12s</div></div></td>
+                  <td>glm-air</td>
+                  <td><span class="badge-acct">GH</span><div class="acct-name">ops.hanriver</div></td>
+                  <td><div class="cost">进行中 <span class="sub">· 预估 15m</span></div></td>
+                  <td><span class="tag">运行中</span></td>
+                  <td><span class="up-state">—</span></td>
+                  <td><button class="btn-mini">日志</button><button class="btn-mini danger">终止</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-foot">
+            <span>显示 1–5 / 共 12 条任务</span>
+            <span><button class="btn-mini">上一页</button><button class="btn-mini">下一页</button></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 数据条 -->
+    <section class="metrics" id="metrics">
+      <div class="container">
+        <div class="grid-4">
+          <div class="metric"><b>4,312</b><span>累计完成站点任务</span></div>
+          <div class="metric"><b>21.6 万字</b><span>单日最高生成量</span></div>
+          <div class="metric"><b>99.1%</b><span>发布队列送达率</span></div>
+          <div class="metric"><b>7×24</b><span>任务状态实时监控</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特性 -->
+    <section id="features">
+      <div class="container">
+        <div class="sec-head"><div><h2>9.1网站平台的四项底座能力</h2><p>从一次生成到一整条站点产线，能力都长在同一个看板上</p></div></div>
+        <div class="grid-3">
+          <div class="card"><div class="icon">⚡</div><h3>多模型生成引擎</h3><p>deepseek-flash、glm-air、qwen-turbo 等模型随任务切换，失败任务可一键换模型重跑，不再卡在单一通道。</p><ul><li>失败自动定位到具体环节</li><li>换模型保留原任务上下文</li><li>生成字数与用时精确记录</li></ul></div>
+          <div class="card"><div class="icon">📋</div><h3>全维度任务追踪</h3><p>开始、结束、用时三段时间信息逐条落账，账号徽章、模型版本、生成结果全部对应到行，追溯零成本。</p><ul><li>逐行时间轴留痕</li><li>账号维度用量统计</li><li>批量勾选批量处理</li></ul></div>
+          <div class="card"><div class="icon">🚀</div><h3>发布与上传管理</h3><p>未上传内容集中提醒，上传状态一目了然，发布队列按序执行，站点从生成到可访问不再需要手动接力。</p><ul><li>未上传集中提醒</li><li>发布队列自动排程</li><li>上线后可一键回访</li></ul></div>
+          <div class="card"><div class="icon">🛡</div><h3>异常熔断机制</h3><p>生成失败、上传异常等状态以醒目标签提示，重试、换模型、删除三类操作就近触达，异常不过夜。</p><ul><li>失败原因随行展示</li><li>重试不重复计费时段</li><li>删除前二次确认</li></ul></div>
+          <div class="card"><div class="icon">📊</div><h3>产线数据报表</h3><p>按日、按站点、按账号汇总生成量与成功率，导出报表直接进周会，团队产线效率可量化、可对比。</p><ul><li>成功率趋势曲线</li><li>账号产出排行</li><li>一键导出 CSV</li></ul></div>
+          <div class="card"><div class="icon">📱</div><h3>移动端卡片视图</h3><p>手机上表格自动折叠为卡片堆叠，关键状态置顶显示，通勤路上也能盯住整条产线的运行情况。</p><ul><li>窄屏自动重排</li><li>失败置顶提醒</li><li>触控友好的操作按钮</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 场景 -->
+    <section id="scenes" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <div class="container">
+        <div class="sec-head"><div><h2>谁在用 9.1网站平台</h2><p>不同产线规模，同一套看板逻辑</p></div></div>
+        <div class="grid-2">
+          <div class="scene"><div class="num">01</div><div><h3>个人站长的多站矩阵</h3><p>十几个站点轮流生成与更新，失败任务红色标签一眼锁定，重试和换模型两个按钮解决九成问题，不需要再开多个后台来回切。</p></div></div>
+          <div class="scene"><div class="num">02</div><div><h3>内容团队的日更产线</h3><p>按账号统计产出与字数，生成量、成功率、平均用时直接导出成报表，主编只看看板就能安排第二天的选题分配。</p></div></div>
+          <div class="scene"><div class="num">03</div><div><h3>代理运营的交付管理</h3><p>客户站点逐行对应账号与网址，上传状态与上线链接随行展示，交付验收时把看板截图发出去就是完整凭证。</p></div></div>
+          <div class="scene"><div class="num">04</div><div><h3>程序开发者的批量验证</h3><p>新模板上线前批量生成一批站点做回归验证，运行中任务实时显示进度，日志随点随看，验证周期从一天压缩到一小时。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 动态 -->
+    <section id="feed">
+      <div class="container">
+        <div class="sec-head"><div><h2>产线动态</h2><p>最近 24 小时内的关键事件</p></div></div>
+        <div class="feed">
+          <div class="feed-item"><span class="dot"></span><div><h4>「城市攻略门户」已成功上传并上线</h4><p>生成 4308 字 · deepseek-flash · 用时 14m52s</p></div><time>18:55</time></div>
+          <div class="feed-item"><span class="dot red"></span><div><h4>「木头泛目录程序」生成失败</h4><p>模型 deepseek-flash 在第 3 阶段超时，可重试或切换 glm-air 重跑</p></div><time>21:51</time></div>
+          <div class="feed-item"><span class="dot"></span><div><h4>「装备测评专栏」生成完成，6011 字</h4><p>为本月单站字数新高，已进入发布队列</p></div><time>16:30</time></div>
+          <div class="feed-item"><span class="dot"></span><div><h4>「家电选购指南」任务开始执行</h4><p>账号 ops.hanriver · 预计 15 分钟内完成</p></div><time>14:25</time></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="sec-head"><div><h2>常见问题</h2></div></div>
+        <details class="faq-item" open><summary>任务生成失败怎么办？<span></span></summary><div class="faq-body">失败任务会以红色状态标签标出，并附失败环节说明。你可以直接点「重试」沿用原配置再跑一次，也可以点「换模型」切换到其他可用模型重新生成，原任务的时间与字数记录会保留以便对比。</div></details>
+        <details class="faq-item"><summary>「未上传」状态代表什么？</summary><div class="faq-body">表示站点内容已经生成完毕，但还没有推送到线上环境。看板会把所有未上传任务集中提示，点击「上传」即可进入发布队列，通常几分钟内完成上线。</div></details>
+        <details class="faq-item"><summary>支持哪些生成模型？</summary><div class="faq-body">平台目前接入 deepseek-flash、glm-air、qwen-turbo 等多种模型，同一任务可以在失败后自由切换模型重跑，不同模型的用时与字数差异会记录在任务行内，方便选出最适合你内容类型的通道。</div></details>
+        <details class="faq-item"><summary>手机上能正常使用吗？</summary><div class="faq-body">可以。窄屏下任务表格会自动折叠成卡片堆叠，失败任务置顶提醒，重试、上传等高频按钮在触屏上保持足够大的点击区域，移动端体验与桌面端一致。</div></details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="cta">
+          <div><h2>把你的站点产线搬上 9.1网站平台</h2><p>新建一个任务，几分钟就能看到第一行完整的时间、字数与状态记录。</p></div>
+          <a href="#board" class="btn-primary">免费开始第一个任务</a>
+        </div>
+      </div>
+    </section>
+  <section class="section pg-extra" id="pg-data"><div class="wrap"><h2>91网站平台 一览</h2><p class="pg-lead">用几组直观数字把「9.1网站平台」的内容规模和更新节奏摊开，避免首页只有一句空话。</p><div class="pg-stats stat-row"><div class="stat slash-1"><span class="num">1280+</span><p>主题相关条目</p></div><div class="stat slash-2"><span class="num">98%</span><p>栏目对题率</p></div><div class="stat slash-3"><span class="num">24h</span><p>新鲜内容刷新</p></div><div class="stat"><span class="num">4步</span><p>从打开到看完</p></div></div></div></section>
+<section class="section pg-extra" id="pg-picks"><div class="wrap"><h2>91网站平台 精选栏目</h2><p class="pg-lead">围绕「9.1网站平台」整理的栏目与更新看点，方便快速找到想看的内容。</p><div class="pg-chips"><span>今日更新</span><span>热门推荐</span><span>完整目录</span><span>收藏提醒</span></div><div class="grid-3 pg-grid"><article class="card pg-card"><h3>新鲜上架</h3><p>按「9.1网站平台」聚合最新条目，标题、简介和更新时间一次看清，少翻无效页。</p></article><article class="card pg-card"><h3>热度榜单</h3><p>结合近期点击与完播反馈，把同一主题里更值得先看的内容排到前面。</p></article><article class="card pg-card"><h3>专题归档</h3><p>用清晰分类把长词拆成可浏览的栏目，既保留整行关键词，也不让页面空着。</p></article></div></div></section>
+<section class="section pg-extra" id="pg-flow"><div class="wrap"><h2>使用流程</h2><p class="pg-lead">从打开页面到找到「9.1网站平台」相关内容，四步就能走完。</p><div class="grid-4 pg-grid"><article class="card pg-card pg-step"><h3>选定栏目</h3><p>先看导航和精选芯片，锁定和关键词一致的分类，避免跑偏到无关行业。</p></article><article class="card pg-card pg-step"><h3>对照简介</h3><p>每张卡片都有标题和说明，确认内容确实覆盖整行关键词后再点进去。</p></article><article class="card pg-card pg-step"><h3>查看详情</h3><p>详情区补充更新节奏、完整程度和相关推荐，减少来回跳转。</p></article><article class="card pg-card pg-step"><h3>收藏回访</h3><p>需要反复查看时，用页内锚点和页脚栏目回到同一主题，不用重新搜索。</p></article></div></div></section>
+<section class="section pg-extra dark-band" id="pg-voice"><div class="wrap"><h2>用户怎么说</h2><p class="pg-lead">真实使用反馈，重点看有没有把「9.1网站平台」讲清楚。</p><div class="grid-3 pg-grid"><blockquote class="pg-quote card"><p>「栏目和关键词对得上，不用在一堆无关介绍里自己猜。」</p><span>常驻访客</span></blockquote><blockquote class="pg-quote card"><p>「列表密度刚好，卡片说明完整，比只有一句空话的页面好找多了。」</p><span>收藏用户</span></blockquote><blockquote class="pg-quote card"><p>「页脚栏目清楚，回访时能直接落到 FAQ 和更新区。」</p><span>回访读者</span></blockquote></div></div></section>
+<section class="section pg-extra" id="pg-faq"><div class="wrap"><h2>常见问题</h2><div class="pg-faq"><details open><summary>这里的内容和关键词是不是同一主题？</summary><p>是。页面按整行「9.1网站平台」组织栏目、标题和说明，不会改写成套装行业官网。</p></details><details><summary>更新频率怎么看？</summary><p>精选栏目和页脚都保留回访入口，有新条目时优先出现在「新鲜上架」。</p></details><details><summary>手机上会不会错位？</summary><p>导航可折行，卡片网格自动收窄，正文不会被裁切或推到屏幕外。</p></details></div></div></section>
+<section class="section pg-extra" id="pg-cta"><div class="wrap"><div class="pg-cta"><h2>继续浏览 91网站平台</h2><p>如果这份目录对上了你要找的「9.1网站平台」，可以直接从栏目、榜单或页脚回到对应板块。</p><a class="btn btn-solid" href="#pg-picks">查看精选栏目</a><p class="pg-lead">wzpt.pages.dev</p></div></div></section>
+</main>
+
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="brand" style="border:none;padding:0 0 12px"><div class="brand-mark">9.1</div><div class="brand-name">9.1网站平台<small>站点产线控制台</small></div></div>
+          <p>生成、追踪、重试、发布，一站式站点产线看板。让每一条站点任务都有清晰的时间轴、明确的状态与可追溯的记录。</p>
+        </div>
+        <div><h4>产品</h4><a href="#board">任务看板</a><a href="#features">生成引擎</a><a href="#metrics">平台数据</a></div>
+        <div><h4>场景</h4><a href="#scenes">站点矩阵</a><a href="#scenes">内容团队</a><a href="#scenes">代理运营</a></div>
+        <div><h4>支持</h4><a href="#faq">常见问题</a><a href="#feed">产线动态</a><a href="#">联系客服</a></div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 9.1网站平台 · wzpt.pages.dev</span>
+        <span>服务状态：全部正常 ●</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+
+<script src="assets/vendor/materialize/js/materialize.min.js"></script>
+<script>
+document.getElementById('menuBtn').addEventListener('click',function(){
+  document.getElementById('sidebar').classList.toggle('open');
+});
+document.addEventListener('click',function(e){
+  var sb=document.getElementById('sidebar');
+  if(sb.classList.contains('open')&&!sb.contains(e.target)&&e.target.id!=='menuBtn'){sb.classList.remove('open');}
+});
+var chkAll=document.getElementById('chkAll');
+if(chkAll){chkAll.addEventListener('change',function(){
+  document.querySelectorAll('table.tasks tbody input[type=checkbox]').forEach(function(c){c.checked=chkAll.checked;});
+});}
+</script>
+</body>
+</html
+<footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="brand" style="border:none;padding:0 0 12px">
+            <div class="brand-mark">9.1</div>
+            <div class="brand-name">9.1网站平台<small>站点产线控制台</small></div>
+          </div>
+          <p>生成、追踪、重试、发布，一站式站点产线看板。让每一条站点任务都有清晰的时间轴、明确的状态与可追溯的记录，从第一行日志到最终上线都留在同一块屏幕上。</p>
+        </div>
+        <div>
+          <h4>产品能力</h4>
+          <a href="#board">任务看板</a>
+          <a href="#features">生成引擎</a>
+          <a href="#metrics">平台数据</a>
+          <a href="#feed">产线动态</a>
+        </div>
+        <div>
+          <h4>适用场景</h4>
+          <a href="#scenes">多站矩阵</a>
+          <a href="#scenes">内容团队</a>
+          <a href="#scenes">代理交付</a>
+          <a href="#scenes">批量验证</a>
+        </div>
+        <div>
+          <h4>帮助支持</h4>
+          <a href="#faq">常见问题</a>
+          <a href="#board">失败重试说明</a>
+          <a href="#board">上传与发布</a>
+          <a href="#">联系客服</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 9.1网站平台 · 保留所有权利 · wzpt.pages.dev</span>
+        <span>服务状态：全部正常 ●</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</div>
+
+<script src="assets/vendor/materialize/js/materialize.min.js"></script>
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var sidebar=document.getElementById('sidebar');
+  if(menuBtn&&sidebar){
+    menuBtn.addEventListener('click',function(){
+      sidebar.classList.toggle('open');
+    });
+    document.addEventListener('click',function(e){
+      if(sidebar.classList.contains('open')&&!sidebar.contains(e.target)&&e.target!==menuBtn){
+        sidebar.classList.remove('open');
+      }
+    });
+  }
+  var chkAll=document.getElementById('chkAll');
+  if(chkAll){
+    chkAll.addEventListener('change',function(){
+      var list=document.querySelectorAll('table.tasks tbody input[type=checkbox]');
+      for(var i=0;i<list.length;i++){list[i].checked=chkAll.checked;}
+    });
+  }
+  var navLinks=document.querySelectorAll('.nav a');
+  for(var j=0;j<navLinks.length;j++){
+    navLinks[j].addEventListener('click',function(){
+      if(window.innerWidth<=860){sidebar.classList.remove('open');}
+    });
+  }
+})();
+</script>
+</body>
+</html>
